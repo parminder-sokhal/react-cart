@@ -1,0 +1,99 @@
+@import "./colors.scss";
+
+.cart {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    > main {
+        padding: 2rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        > h1 {
+            color: $tertiary;
+            font: 100 2rem "Roboto";
+        }
+    }
+
+    > aside {
+        border-radius: 100px 0 0 100px;
+        background-color: $primary;
+        color: $tertiary;
+        height: 100%;
+        width: 100%;
+        box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.182);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        > h2 {
+            margin: 2rem;
+            font: 100 1.8rem "Roboto";
+            letter-spacing: 2px;
+
+            &:last-of-type {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.card-item {
+    background-color: $tertiary;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+
+    > img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    > article {
+        margin-left: 1rem;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        > button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: $primary;
+            color: $tertiary;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: $primary-dark;
+            }
+        }
+
+        p {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+        }
+
+    }
+        svg {
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: auto;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+}
